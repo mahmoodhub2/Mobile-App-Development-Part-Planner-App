@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Make page scrollable in case number of parties exceed screen space-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+    <!--Linear layout inside scrollview since scrollview can have only one child-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--Toolbar Widget-->
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkGrey"
+            android:minHeight="?actionBarSize"
+            android:theme="?actionBarTheme">
+
+            <!--Title Within Toolbar-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="PARTY PLANNER"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <!--Button Within Toolbar-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:onClick="newParty"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <!--Screen Below Toolbar-->
+        <!--LIST OF PARTIES-->
+        <ListView
+            android:id="@+id/partyListView"
+            android:layout_width="wrap_content"
+            android:layout_height="650dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:divider="@color/darkGrey"
+            android:dividerHeight="3dp" />
+
+
+    </LinearLayout>
+</ScrollView>

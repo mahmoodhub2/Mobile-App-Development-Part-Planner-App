@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <!--CAKE LOGO-->
+
+    <TextView
+        android:id="@+id/linkBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="84dp"
+        android:text="Need some food ideas? Click the icon: "
+        android:textColor="@color/darkGrey"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/partyIdeasButton2"
+        android:layout_width="41dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="84dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_celebration_24"
+        app:tint="@color/darkGrey"
+        android:onClick="gotoLink"/>
+
+    <ImageView
+        android:id="@+id/mainLogoImageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_cake_24"
+        app:tint="@color/darkGrey" />
+
+    <!--APP TITLE-->
+    <TextView
+        android:id="@+id/partyPlannerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PARTY PLANNER"
+        android:textColor="@color/darkGrey"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainLogoImageView" />
+
+
+    <!--Need some party ideas?-->
+    <TextView
+        android:id="@+id/partyIdeasTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="32dp"
+        android:text="Need some party ideas? Click the icon: "
+        android:textSize="15dp"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <!--Party ideas icon-->
+    <ImageView
+        android:id="@+id/partyIdeasButton"
+        android:layout_width="41dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_celebration_24"
+        app:tint="@color/darkGrey"
+        android:onClick="partyIdeas"/>
+
+
+    <!--Let's Party Button-->
+    <Button
+        android:id="@+id/letsPartyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LET'S PARTY!"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/partyIdeasTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/partyPlannerTextView"
+        android:onClick="goToMainPage"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

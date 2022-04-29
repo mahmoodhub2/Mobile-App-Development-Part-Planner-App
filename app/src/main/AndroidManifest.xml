@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.partyplannergroup6">
+
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <permission
+        android:name="com.example.partyplannergroup6.permission.DEADLY_ACTIVITY"
+        android:label="@string/app_name"
+        android:description="@string/string_des"
+        android:permissionGroup="android.permission-group.COST_MONEY"
+        android:protectionLevel="dangerous" />
+
+    <uses-permission android:name="com.example.partyplannergroup6.permission.DEADLY_ACTIVITY"/>
+
+
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PartyPlannerGroup6"
+        android:usesCleartextTraffic="true">
+
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="com.example.partyplannergroup6"
+            android:enabled="true"
+            android:exported="true"></provider>
+
+        <service
+            android:name=".PartyPlannerService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".PartyDeletedService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SendInvites"
+            android:exported="false" />
+        <activity
+
+            android:name=".PartyDetailActivity"
+            android:exported="false"
+            android:permission="com.example.partyplannergroup6.permission.DEADLY_ACTIVITY"
+            />
+
+        <activity
+            android:name=".FoodFeed"
+            android:exported="false" />
+        <activity
+            android:name=".HomePage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".ConnBroadcastReciever"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

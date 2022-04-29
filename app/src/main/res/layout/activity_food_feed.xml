@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    tools:context=".FoodFeed">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+
+        <EditText
+            android:id="@+id/titleTextViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#090909"
+            android:padding="7dp"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#F6F4F4"
+            android:textColorHint="#FDF7F7"
+            android:textColorLink="#F3EAEA"
+            android:textSize="22sp" />
+
+        <ListView
+            android:id="@+id/itemsListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>
+
+
+
+
+
